@@ -12,6 +12,6 @@ export class AuthService {
         const hashedPassword = await this.hashService.hashPassword(registerUserDto.password);
         registerUserDto.password = hashedPassword;
 
-       this.userService.createUser(registerUserDto);
+        return await this.userService.createUser(registerUserDto);
     }
 }

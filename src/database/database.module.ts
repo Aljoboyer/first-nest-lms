@@ -17,7 +17,7 @@ import { DatabaseService } from './database.service';
 
         minPoolSize: 5,
 
-        autoIndex: false,
+        autoIndex: true,
 
         serverSelectionTimeoutMS: 5000,
 
