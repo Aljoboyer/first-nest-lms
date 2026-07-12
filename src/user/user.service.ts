@@ -13,9 +13,14 @@ export class UserService {
     ) {}
 
     async createUser(registerUserDto: RegisterUserDto) {  
-
         const createdUser = new this.userModel(registerUserDto);
         await createdUser.save();
         return createdUser
+    }
+
+    async getUserById(id: string) {
+        const user = await this.userModel.findById(id)
+        console.log('user ===>', user);
+        return user;
     }
 }
