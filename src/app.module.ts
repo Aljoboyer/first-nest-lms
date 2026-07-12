@@ -6,6 +6,7 @@ import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { validationSchema } from './config/validation';
 import { DatabaseModule } from './database/database.module';
+import { CourseModule } from './course/course.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { DatabaseModule } from './database/database.module';
       cache: true,
       validationSchema,
     }),
-    DatabaseModule
+    DatabaseModule,
+    CourseModule
   ],
   controllers: [AppController],
   providers: [AppService],
