@@ -16,10 +16,6 @@ export class UserService {
 
         const createdUser = new this.userModel(registerUserDto);
         await createdUser.save();
-        return {
-            message: 'User created successfully',
-            user: createdUser,
-            status: 201 
-        }
+        return createdUser
     }
 }
