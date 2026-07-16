@@ -17,7 +17,8 @@ import { CourseModule } from './course/course.module';
       validationSchema,
     }),
     DatabaseModule,
-    CourseModule
+    CourseModule,
+    
   ],
   controllers: [AppController],
   providers: [AppService],
